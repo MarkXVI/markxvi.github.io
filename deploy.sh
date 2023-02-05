@@ -3,10 +3,10 @@
 # abort on errors
 set -e
 
+git checkout -b gh-pages
+
 # build
 npm run build
-
-git checkout -b gh-pages
 
 cp -r dist/* .
 git add .
