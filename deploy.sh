@@ -6,11 +6,11 @@ set -e
 # build
 npm run build
 
-git checkout -B gh-pages
+git checkout -b gh-pages
 
 cp -r dist/* .
 git add .
 git commit -m "Deploy"
 git push origin gh-pages
 
-git checkout -B main
+git checkout -b main
