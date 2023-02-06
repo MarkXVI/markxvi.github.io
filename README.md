@@ -11,7 +11,7 @@ This webpage uses:
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
 ![GitHub_Pages](https://img.shields.io/badge/github_pages-black?style=for-the-badge&logo=github&logoColor=white)
 
-### TODO:
+### Features:
 <details>
 <summary>Main</summary>
 This will include the following:

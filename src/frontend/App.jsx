@@ -26,36 +26,36 @@ function App() {
       case 'cv':
         return (
           <div>
-            < Header setActivePanel={setActivePanel} />
-            < CV />              
+            < Header activePanel={activePanel} setActivePanel={setActivePanel} />
+            < CV />
           </div>
         )
       case 'start':
         return (
           <div>
-            < Header setActivePanel={setActivePanel} />
-            < Start />              
+            < Header activePanel={activePanel} setActivePanel={setActivePanel} />
+            < Start />
           </div>
         )
       case 'contact':
         return (
           <div>
-            < Header setActivePanel={setActivePanel} />
-            < Contact />              
+            < Header activePanel={activePanel} setActivePanel={setActivePanel} />
+            < Contact />
           </div>
         )
       case '3dcv':
         return (
           <div>
-            < Header setActivePanel={setActivePanel} />
-            < ThreeCV />              
+            < Header activePanel={activePanel} setActivePanel={setActivePanel} />
+            < ThreeCV />
           </div>
         )
       case '3dstart':
         return (
           <div>
-            < Header setActivePanel={setActivePanel} />
-            < ThreeStart />              
+            < Header activePanel={activePanel} setActivePanel={setActivePanel} />
+            < ThreeStart />
           </div>
         )
     }
