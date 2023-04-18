@@ -15,7 +15,7 @@ import Header from './components/constant_components/header/header.component.jsx
 import './stylesheets/main.stylesheet.css';
 
 function App() {
-  const [activePanel, setActivePanel] = useState('start');
+  const [activePanel, setActivePanel] = useState('terminal');
 
   const setCurrentPage = () => {
 
@@ -56,6 +56,12 @@ function App() {
           <div>
             < Header activePanel={activePanel} setActivePanel={setActivePanel} />
             < ThreeStart />
+          </div>
+        )
+      case 'terminal':
+        return (
+          <div>
+            < Terminal setActivePanel={setActivePanel} />
           </div>
         )
     }

@@ -4,7 +4,8 @@ import { help, socials, email, banner, banner2 } from './base_commands.js';
 import { up, spiderman, trippy, minion } from './emoji_commands';
 import '../../stylesheets/terminal.stylesheet.css';
 
-import CV from '../../assets/CVdocs/CV_MarkHarvey.pdf';
+import CV_ENG from '../../assets/CVdocs/CV_MarkHarvey_ENG.pdf';
+import CV_SWE from '../../assets/CVdocs/CV_MarkHarvey_SWE.pdf';
 import Chicken from '../../assets/chicken.svg';
 
 const Terminal = (setActivePanel) => {
@@ -145,9 +146,16 @@ const Terminal = (setActivePanel) => {
             case 'download':
                 switch (commandArray[1]) {
                     case 'help':
-                        return addLine('<span class=\"inherit\"> Available options: <span class=\"command\">CV</span>.</span>', "", 80);
+                        return addLine('<span class=\"inherit\"> Available options: <span class=\"command\">CV &lt;language&gt;, chicken</span>.</span>', "", 80);
                     case 'cv':
-                        return download(CV, 'CV_MarkHarvey.pdf');
+                        if (commandArray[2].toLowerCase == 'eng') {
+                            return download(CV_ENG, 'CV_MarkHarvey_ENG.pdf');
+                        } else if (commandArray[2].toLowerCase == 'swe') {
+                            return download(CV_SWE, 'CV_MarkHarvey_SWE.pdf');
+                        } else {
+                            return addLine('<span class=\"inherit\"> Please specify language: <span class=\"command\">swe or eng</span>.</span>', "", 80);
+                        }
+                        
                     case 'chicken':
                         return download(Chicken, 'chicken.svg');
                     default:
