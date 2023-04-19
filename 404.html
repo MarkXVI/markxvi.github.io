@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting...</title>
-  <script>
-    sessionStorage.redirect = location.href;
-  </script>
-</head>
-<body>
-  <script>
-    const redirectTo = sessionStorage.redirect ? sessionStorage.redirect : '/';
-    delete sessionStorage.redirect;
-    location.replace(redirectTo);
-  </script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      window.open("/", "_self");
+    </script>
+    <meta http-equiv="refresh" content="0;URL='/'" />
+  </head>
+  <body>
+    <h1>Redirecting...</h1>
+    If you are not redirected automatically, <a href="/">click here</a>.
+  </body>
 </html>
