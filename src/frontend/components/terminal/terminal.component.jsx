@@ -8,7 +8,7 @@ import CV_ENG from '../../assets/CVdocs/CV_MarkHarvey_ENG.pdf';
 import CV_SWE from '../../assets/CVdocs/CV_MarkHarvey_SWE.pdf';
 import Chicken from '../../assets/chicken.svg';
 
-const Terminal = (setActivePanel) => {
+const Terminal = () => {
 
     const $ = (elid) => {
         return document.getElementById(elid);
@@ -124,25 +124,11 @@ const Terminal = (setActivePanel) => {
                             addLine('type <span class=\"command\">"open help"</span> for available options.', "", 80)
                         );
                 }
-            case 'goto':
-                switch (commandArray[1]) {
-                    case 'help':
-                        return addLine('<span class=\"inherit\"> Available options: <span class=\"command\">Home</span>, <span class=\"command\">CV</span>, <span class=\"command\">Contact</span>', "", 80);
-                    case 'home':
-                        setActivePanel.setActivePanel('start');
-                        return window.open("/", "_self");
-                    case 'cv':
-                        setActivePanel.setActivePanel('cv');
-                        return window.open("/", "_self");
-                    case 'contact':
-                        setActivePanel.setActivePanel('contact');
-                        return window.open("/", "_self");
-                    default:
-                        return (
-                            addLine('Error: Link not found.', "error", 80),
-                            addLine('type <span class=\"command\">"goto help"</span> for available options.', "", 80)
-                        );
-                }
+            case 'return':
+                return(
+                    addLine('<span class=\"whisper\">BYEEEE!</span>', "", 80),
+                    window.open("/", "_self")
+                )                    
             case 'download':
                 switch (commandArray[1]) {
                     case 'help':

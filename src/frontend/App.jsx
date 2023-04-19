@@ -12,10 +12,10 @@ import ThreeStart from './components/threeStart/threeStart.component.jsx';
 
 import Header from './components/constant_components/header/header.component.jsx';
 
-import './stylesheets/main.stylesheet.css';
+import './stylesheets/App.stylesheet.css';
 
 function App() {
-  const [activePanel, setActivePanel] = useState('terminal');
+  const [activePanel, setActivePanel] = useState('start');
 
   const setCurrentPage = () => {
 
@@ -58,12 +58,6 @@ function App() {
             < ThreeStart />
           </div>
         )
-      case 'terminal':
-        return (
-          <div>
-            < Terminal setActivePanel={setActivePanel} />
-          </div>
-        )
     }
 
   }
@@ -71,11 +65,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" exact element={setCurrentPage()} />
-        <Route path="terminal" element={< Terminal setActivePanel={setActivePanel} />} />
+        <Route path="/" element={setCurrentPage()} />
+        <Route path="terminal" element={< Terminal />} />
         <Route path="os" element={< OS />} />
-        
-        <Route path="*" element={setCurrentPage()} />
       </Routes>
     </Router>
   )
