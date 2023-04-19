@@ -16,7 +16,7 @@ This webpage uses:
 <summary>Main</summary>
 This will include the following:
 
-- [ ] A button for switching to 3D mode
+- [x] A button for switching to 3D mode
 - [ ] A button for switching to the terminal
 - [ ] A Sign in button
 - [ ] A Sign up button
@@ -27,7 +27,7 @@ This will include the following:
 <summary>3D Main </summary>
 This will include the following:
 
-- [ ] A button for switching to 2D mode
+- [x] A button for switching to 2D mode
 - [ ] A button for switching to the terminal
 - [ ] A Sign in button
 - [ ] A Sign up button
@@ -47,7 +47,7 @@ This will include the following commands:
 - [x]  `download` (for cv pdf)
 - [x]  `emoji` (for some emoji art)
 - [ ]  `connect` (for mailing/contacting me)
-- [ ]  `goto` (for page switching)
+- [x]  `return` (for returning to the home page)
 - [ ]  `signin`
 - [ ]  `signup`
 - [x]  `showme` (shows livecam)

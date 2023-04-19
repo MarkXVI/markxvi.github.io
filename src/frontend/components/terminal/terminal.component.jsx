@@ -128,7 +128,7 @@ const Terminal = () => {
                 return(
                     addLine('<span class=\"whisper\">BYEEEE!</span>', "", 80),
                     window.open("/", "_self")
-                )                    
+                );    
             case 'download':
                 switch (commandArray[1]) {
                     case 'help':

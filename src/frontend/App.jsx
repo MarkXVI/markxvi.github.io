@@ -18,6 +18,7 @@ function App() {
   const [activePanel, setActivePanel] = useState('start');
 
   const setCurrentPage = () => {
+    console.log("Setting Current Page...");
 
     switch (activePanel) {
 
@@ -25,35 +26,35 @@ function App() {
         return < Loading />
       case 'cv':
         return (
-          <div>
+          <div className='AppHeaderSpace'>
             < Header activePanel={activePanel} setActivePanel={setActivePanel} />
             < CV />
           </div>
         )
       case 'start':
         return (
-          <div>
+          <div className='AppHeaderSpace'>
             < Header activePanel={activePanel} setActivePanel={setActivePanel} />
             < Start />
           </div>
         )
       case 'contact':
         return (
-          <div>
+          <div className='AppHeaderSpace'>
             < Header activePanel={activePanel} setActivePanel={setActivePanel} />
             < Contact />
           </div>
         )
       case '3dcv':
         return (
-          <div>
+          <div className='AppHeaderSpace'>
             < Header activePanel={activePanel} setActivePanel={setActivePanel} />
             < ThreeCV />
           </div>
         )
       case '3dstart':
         return (
-          <div>
+          <div className='AppHeaderSpace'>
             < Header activePanel={activePanel} setActivePanel={setActivePanel} />
             < ThreeStart />
           </div>
@@ -65,9 +66,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={setCurrentPage()} />
-        <Route path="terminal" element={< Terminal />} />
-        <Route path="os" element={< OS />} />
+        <Route path="" element={setCurrentPage()} />
+        <Route path="/terminal" element={< Terminal />} />
+        <Route path="/os" element={< OS />} />
       </Routes>
     </Router>
   )

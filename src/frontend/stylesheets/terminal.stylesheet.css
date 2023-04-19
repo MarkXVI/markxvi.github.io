@@ -6,6 +6,7 @@ body {
     background: #211D1B;
     font-family: cursor, monospace;
     overflow-x: hidden;
+    margin: 0 0 5rem 0;
 }
 
 #root {

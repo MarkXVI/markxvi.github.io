@@ -42,7 +42,6 @@ button {
 }
 
 body {
-  margin: 5rem 0 0 0;
   --s: 80px; /* the size */
   --c: #1d1c1b;
   
@@ -79,4 +78,8 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(133, 133, 133, 0.747); 
+}
+
+.AppHeaderSpace {
+  margin-top: 6rem;
 }
